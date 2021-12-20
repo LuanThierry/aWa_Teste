@@ -1,0 +1,104 @@
+@font-face {
+	src: url("../fonts/PÕRTO.otf");
+	font-family: "PÕRTO";
+}
+@font-face {
+	src: url("../fonts/Louis George Cafe.ttf");
+	font-family: "Louis George Cafe";
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+li{
+	list-style: none;
+	
+}
+a{
+	text-decoration: none;
+	
+}
+header{
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	height: 100px;
+}
+.max-header{
+	background-color: #141414;
+}
+.min-header{
+	background-color: #21243D;
+}
+.container{
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+	display: grid;
+	grid-template-areas: 
+		"lgo ... nav";
+	align-content: center;
+	grid-template-columns: auto 1fr auto;
+}/*um fr e uma unidade de fracao o css pega o espaco disponivel e divide o espaco em cada*/
+.logo{
+	grid-area: lgo;
+}
+.nav-bar{
+	font-size: 9px;
+	text-transform: uppercase;
+	grid-area: nav;
+	display: grid;
+	align-content: center;
+}
+.nav-bar ul{
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 25px;
+}
+.nav-bar a{
+	font-family: Louis George Cafe;
+	font-size: 1em;
+	color: #9399FF;
+	
+}
+.ghost{
+	width: 100%;
+	height: 100px;
+	background-color: #141414;
+}
+main{
+	font-size: 25px;
+}
+main section{
+	display: grid;
+	justify-content: center;/*representa o alinhamento horizontal dos filhos do section*/
+	align-content: center;/*representa o alinhamento vertical*/
+	font-family: PÕRTO;
+	font-size: 3em;/*ele pega o tamanho da fonte do elemneto pai dele*/
+}
+/*vh significa viewport height que seria a altura da tela */
+main section:nth-child(odd){
+	height: 100vh;
+	background-color: #6B69D6;
+	
+}
+main section:nth-child(even){
+	height: 100vh;
+	background-color: #21243D;
+	
+}
+a{
+  color: white;
+  font-family: PÕRTO;
+  font-size: 25px;
+}
+.a{
+	color: #6B69D6;
+}
+.b{
+	color: #21243D;
+}
